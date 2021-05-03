@@ -1,0 +1,1 @@
+sh setup.sh && streamlit run app2.py -- --server.port 8888
