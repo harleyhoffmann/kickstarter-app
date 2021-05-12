@@ -44,6 +44,12 @@ if section == 'Data Explorer':
     x_axis = st.sidebar.selectbox('X Axis', ['category','main_category','country'])
     y_axis = st.sidebar.selectbox('Y Axis', ['state','goal'])
     st.header("Exploring Kickstart Campaigns! (by Harley Hoffmann)")
+    st.subheader("Summary")
+    st.text("Use this area to explore the data within the Kickstarter dataset.")
+    st.text("This was based on historical Kickstarter campaigns and their funding amounts.")
+    st.text("The goal here is to determine the success rate of a particular campaign.")
+    st.text("Success is based on their category, main_category, and funding amount.")
+    st.text("Visit the Model Explorer section to see possible success percentages.")
     st.write(df)
     
     if chart_type == 'Bar':
@@ -59,8 +65,12 @@ if section == 'Data Explorer':
         st.plotly_chart(fig)
 
 
+
 elif section == 'Model Explorer':
     st.header('Make Predictions With Your Model Here')
+    st.text("Use this area to explore different campaign types.")
+    st.text("Select different categories, main_categories, and funding amounts.")
+    st.text("View their percentage chance of success. Enjoy!")
     mod = load_model()
     
     category = st.sidebar.selectbox('Category', df['category'].unique())
