@@ -50,6 +50,7 @@ if section == 'Data Explorer':
     st.text("The goal here is to determine the success rate of a particular campaign.")
     st.text("Success is based on their category, main_category, and funding amount.")
     st.text("Visit the Model Explorer section to see possible success percentages.")
+    st.text("Model Used: XGBClassifier")
     st.write(df)
     
     if chart_type == 'Bar':
